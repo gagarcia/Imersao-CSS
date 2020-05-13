@@ -1,13 +1,44 @@
+/*Reset CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-image: url("background3.png");
+  background-image: url("../img/fundo.jpg");
   background-size:auto 100vh;
   opacity: 20;
   font-family: Arial;
   height: 100vh;
+  font-size: 18px;
+}
+
+/*se a tela tiver pelo menos 400px estes estilos serão carregados*/  
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
   }
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}  
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .menu {
-
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  background-color: white;
 }
 
 .menu ul {
@@ -18,6 +49,11 @@ body {
 /*todas as li da classe menu perdem o ponto*/
 .menu li {
   list-style: none;
+}
+
+.menu a {
+  padding: 10px 20px;
+  display: block;
 }
 
 a {
@@ -34,8 +70,22 @@ a:hover {
 .site-subtitle,
 .site-title {
   text-align: center;
+  color: whitesmoke;
+}
+
+.site-title {
+  font-size: 4em;
 }
 
 .site-subtitle {
   font-style: italic;
+}
+
+.img-portfolio {
+height: 180px;
+width: 180px;
+}
+
+.self-presentation {
+  color: pink;
 }
